@@ -1,0 +1,8 @@
+USER;Sara;abcdef
+USER;Ali;12345
+TASK;Sara;Pezeshki raftan;4;2025-01-30;false
+TASK;Sara;Sport;2;2025-02-05;false
+TASK;Ali;Saḱhtan web site;3;2025-02-15;false
+TASK;Ali;Yaddash avordan dars;5;2025-01-20;false
+TASK;Ali;Tamiz karḋan tamam otagh ha;1;2025-01-25;false
+TASK;Ali;Code neveshtan;4;2025-02-10;false
