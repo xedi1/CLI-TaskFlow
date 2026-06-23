@@ -1,0 +1,55 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+package com.example.taskmanager;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class DataStore {
+   private HashMap<String, ArrayList<Task>> taskHayeKarbar = new HashMap();
+
+   public DataStore() {
+   }
+
+   public void addTask(String var1, Task var2) {
+      if (!this.taskHayeKarbar.containsKey(var1)) {
+         this.taskHayeKarbar.put(var1, new ArrayList());
+      }
+
+      ((ArrayList)this.taskHayeKarbar.get(var1)).add(var2);
+   }
+
+   public ArrayList<Task> getTaskHayeKarbar(String var1) {
+      return (ArrayList)this.taskHayeKarbar.get(var1);
+   }
+
+   public boolean karbarExist(String var1) {
+      return this.taskHayeKarbar.containsKey(var1);
+   }
+
+   public int getTedadTask(String var1) {
+      ArrayList var2 = (ArrayList)this.taskHayeKarbar.get(var1);
+      return var2 != null ? var2.size() : 0;
+   }
+
+   public ArrayList<String> getHameKarbarHa() {
+      return new ArrayList(this.taskHayeKarbar.keySet());
+   }
+
+   public void printTaskHayeKarbar(String var1) {
+      ArrayList var2 = (ArrayList)this.taskHayeKarbar.get(var1);
+      if (var2 != null && !var2.isEmpty()) {
+         System.out.println("\n\ud83d\udccb Task haye karbar " + var1 + ":");
+
+         for(Task var4 : var2) {
+            System.out.println("  " + var4.toString());
+         }
+
+      } else {
+         System.out.println("❌ Hich taski baraye karbar " + var1 + " peyda nashod!");
+      }
+   }
+
+   public String toString() {
+      return "\ud83d\udce6 DataStore: " + this.taskHayeKarbar.size() + " karbar dar jahat zakhire hastand";
+   }
+}
